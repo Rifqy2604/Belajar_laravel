@@ -9,3 +9,5 @@ Route::get('/', function () {
 route::get('/tes', function () {
     return 'Halo Ini adalah Routing /tes';
 });
+
+route::redirect('/youtube', '/tes');
