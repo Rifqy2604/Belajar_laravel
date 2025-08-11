@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>HALOS</h1>
+    <h1>Halo</h1>
 </body>
 </html>
