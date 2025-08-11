@@ -14,5 +14,6 @@
     <p>Jurusan inforamtika</p>
     <p>Fakultas teknik dan ilmu komputer</p>
     <p>Universitas Komputer Indonesia</p>
+    <p>saya lahir di bandung</p>
 </body>
 </html>
