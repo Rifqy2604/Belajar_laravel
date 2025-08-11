@@ -11,5 +11,6 @@
     <p>Ini adalah percobaan</p>
     <p>nama saya rifqy</p>
     <p>Saya adalah mahasiswa semester 4</p>
+    <p>Jurusan inforamtika</p>
 </body>
 </html>
