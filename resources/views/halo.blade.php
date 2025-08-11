@@ -12,5 +12,6 @@
     <p>nama saya rifqy</p>
     <p>Saya adalah mahasiswa semester 4</p>
     <p>Jurusan inforamtika</p>
+    <p>Fakultas teknik dan ilmu komputer</p>
 </body>
 </html>
