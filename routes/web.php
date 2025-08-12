@@ -8,9 +8,8 @@ Route::get('/', function () {
 });
 
 // Route Get
-route::get('/halo', function () {
-    $nama = "Rifqy Fakhry Zain";
-    return view ("halo", compact("nama"));
+Route::get('/halo', function () {
+    return view('halo');
 });
 
 // Route Redirect
