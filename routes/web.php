@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,3 +15,10 @@ route::get('/halo', function () {
 
 // Route Redirect
 route::redirect('/youtube', '/tes');
+
+// Login
+Route::controller(UserController::class)->group(function () {
+    Route::get('/login', 'login');
+    Route::post('/login', 'dologin');
+    Route::post('/logout', 'doLogout');
+});
