@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CatatanHasilBelajar;
 use Illuminate\Http\Request;
 
 class CatatanHasilBelajarController extends Controller
@@ -12,7 +13,7 @@ class CatatanHasilBelajarController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(CatatanHasilBelajar::all());
     }
 
     /**
@@ -20,7 +21,19 @@ class CatatanHasilBelajarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            "hari_tanggal" => "required|date",
+            "waktu" => "nullable|date_format:H:i",
+            "materi" => "required|string|max:255",
+            "ringkasan" => "nullable|string",
+            "kesulitan" => "nullable|string|max:50",
+            "link_referensi" => "nullable|string",
+            "rencana_selanjutnya" => "nullable|string",
+        ]);
+
+        $catatan = CatatanHasilBelajar::create($request->all());
+
+        return response()->json($catatan, 201);
     }
 
     /**
@@ -28,7 +41,7 @@ class CatatanHasilBelajarController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return response()->json(CatatanHasilBelajar::findOrFail($id));
     }
 
     /**
@@ -36,7 +49,21 @@ class CatatanHasilBelajarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $catatan = CatatanHasilBelajar::findOrFail($id);
+
+        $validated = $request->validate([
+            "hari_tanggal" => "required|date",
+            "waktu" => "nullable|date_format:H:i",
+            "materi" => "required|string|max:255",
+            "ringkasan" => "nullable|string",
+            "kesulitan" => "nullable|string|max:50",
+            "link_referensi" => "nullable|string",
+            "rencana_selanjutnya" => "nullable|string",
+        ]);
+
+        $catatan->update($validated);
+
+        return response()->json($catatan);
     }
 
     /**
@@ -44,6 +71,9 @@ class CatatanHasilBelajarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $catatan = CatatanHasilBelajar::finOrFail($id);
+        $catatan->delete();
+
+        return response()->json(null,0);
     }
 }
