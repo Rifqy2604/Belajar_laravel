@@ -19,4 +19,5 @@ route::redirect('/youtube', '/tes');
 // Login
 Route::controller(UserController::class)->group(function () {
     Route::get('/login', 'login');
+    Route::post('/login', 'dologin');
 });
