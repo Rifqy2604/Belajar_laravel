@@ -13,7 +13,8 @@ class CatatanHasilBelajarController extends Controller
      */
     public function index()
     {
-        return response()->json(CatatanHasilBelajar::all());
+        $data = CatatanHasilBelajar::all();
+        return response()->json($data);
     }
 
     /**
@@ -71,7 +72,7 @@ class CatatanHasilBelajarController extends Controller
      */
     public function destroy(string $id)
     {
-        $catatan = CatatanHasilBelajar::finOrFail($id);
+        $catatan = CatatanHasilBelajar::finOrFall($id);
         $catatan->delete();
 
         return response()->json(null,0);
