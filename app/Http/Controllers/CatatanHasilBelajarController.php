@@ -13,8 +13,8 @@ class CatatanHasilBelajarController extends Controller
      */
     public function index()
     {
-        $data = CatatanHasilBelajar::all();
-        return response()->json($data);
+        $catatan = CatatanHasilBelajar::all();
+        return view("catatan.index", compact("catatan"));
     }
 
     /**
