@@ -13,7 +13,7 @@
         </div>
 
         <div>
-            <label class="block font-medium">Waktu</label>
+            <label class="block font-medium"></label>
             <input type="time" name="waktu" class="w-full border rounded px-3 py-2">
         </div>
 
