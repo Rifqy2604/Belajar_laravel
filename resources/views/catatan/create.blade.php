@@ -28,7 +28,7 @@
         </div>
 
         <div>
-            <label class="block font-medium"></label>
+            <label class="block font-medium">Kesulitan</label>
             <input type="text" name="kesulitan" class="w-full border rounded px-3 py-2">
         </div>
 
