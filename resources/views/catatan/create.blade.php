@@ -23,7 +23,7 @@
         </div>
 
         <div>
-            <label class="block font-medium">Ringkasan</label>
+            <label class="block font-medium"></label>
             <textarea name="ringkasan" class="w-full border rounded px-3 py-2"></textarea>
         </div>
 
