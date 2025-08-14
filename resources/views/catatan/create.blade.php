@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <label class="block font-medium">Materi</label>
+            <label class="block font-medium"></label>
             <input type="text" name="materi" class="w-full border rounded px-3 py-2" required>
         </div>
 
