@@ -72,5 +72,9 @@ class CatatanHasilBelajarController extends Controller
      */
     public function destroy(string $id)
     {
+        $catatan = CatatanHasilBelajar::finOrFall($id);
+        $catatan->delete();
+
+        return response()->json(null,0);
     }
 }
