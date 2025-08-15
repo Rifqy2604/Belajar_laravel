@@ -55,7 +55,7 @@ class CatatanHasilBelajarController extends Controller
         $validated = $request->validate([
             "hari_tanggal" => "required|date",
             "waktu" => "nullable|date_format:H:i",
-
+            "materi" => "required|string|max:255",
         ]);
 
         $catatan->update($validated);
