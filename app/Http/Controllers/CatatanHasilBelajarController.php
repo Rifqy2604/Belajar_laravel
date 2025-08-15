@@ -61,6 +61,10 @@ class CatatanHasilBelajarController extends Controller
             "link_referensi" => "nullable|string",
             "rencana_selanjutnya" => "nullable|string",
         ]);
+
+        $catatan->update($validated);
+
+        return response()->json($catatan);
     }
 
     /**
