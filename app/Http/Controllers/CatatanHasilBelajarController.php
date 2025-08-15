@@ -56,6 +56,7 @@ class CatatanHasilBelajarController extends Controller
             "hari_tanggal" => "required|date",
             "waktu" => "nullable|date_format:H:i",
             "materi" => "required|string|max:255",
+            "ringkasan" => "nullable|string",
         ]);
 
         $catatan->update($validated);
