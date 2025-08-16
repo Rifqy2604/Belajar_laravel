@@ -30,5 +30,20 @@ class CatatanHasilBelajarController extends Controller
      * Display the specified resource.
      */
     
+    function submit(request $request)
+    {
+        $catatan = new CatatanHasilBelajar();
+        $catatan->hari_tanggal = $request->hari_tanggal;
+        $catatan->waktu = $request->waktu;
+        $catatan->materi = $request->materi;
+        $catatan->ringkasan = $request->ringkasan;
+        $catatan->kesulitan = $request->kesulitan;
+        $catatan->link_referensi = $request->link_referensi;
+        $catatan->rencana_selanjutnya = $request->rencana_selanjutnya;
+
+        $catatan->save();
+        return redirect()->route('catatan.tampil');
+
+    }
      
 }
