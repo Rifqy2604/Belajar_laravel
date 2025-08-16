@@ -15,7 +15,7 @@ Route::get('/',function() {
 
 Route::get('/catatan',[CatatanHasilBelajarController::class,'tampil'])->name('catatan.tampil');
 Route::get('/catatan/tambah',[CatatanHasilBelajarController::class,'tambah'])->name('catatan.tambah');
-Route::get('/catatan/submit',[CatatanHasilBelajarController::class,'submit'])->name('catatan.submit');
-Route::get('/catatan/edit',[CatatanHasilBelajarController::class,'edit'])->name('catatan.edit');
-Route::get('/catatan/update',[CatatanHasilBelajarController::class,'update'])->name('catatan.update');
-Route::get('/catatan/delete',[CatatanHasilBelajarController::class,'delete'])->name('catatan.delete');
+Route::post('/catatan/submit',[CatatanHasilBelajarController::class,'submit'])->name('catatan.submit');
+Route::get('/catatan/edit/{id}',[CatatanHasilBelajarController::class,'edit'])->name('catatan.edit');
+Route::post('/catatan/update/{id}',[CatatanHasilBelajarController::class,'update'])->name('catatan.update');
+Route::post('/catatan/delete/{id}',[CatatanHasilBelajarController::class,'delete'])->name('catatan.delete');
