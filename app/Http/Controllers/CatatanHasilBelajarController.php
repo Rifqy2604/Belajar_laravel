@@ -11,10 +11,10 @@ class CatatanHasilBelajarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function tampil()
     {
         $catatan = CatatanHasilBelajar::all();
-        return view("catatan.index", compact("catatan"));
+        return view("catatan.tampil", compact('catatan'));
     }
 
     /**
