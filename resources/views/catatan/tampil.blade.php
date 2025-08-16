@@ -6,7 +6,7 @@
             List Siswa
         </h4>
         <div>
-            <a href="{{ route('siswa.tambah') }}">
+            <a href="{{ route('catatan.tambah') }}">
                 <button type="button"
                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2
         dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah
@@ -18,28 +18,28 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">
-                            No
+                            Hari / Tanggal
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            NIS
+                            Waktu
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Nama
+                            Materi
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Alamat
-                        </th>
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            No Hp
+                            Ringkasan
                         </th>
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Jenis Kelamin
+                            Kesulitan
                         </th>
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Hobi
+                            Link Referensi
+                        </th>
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Rencana Selanjutnya
                         </th>
                         <th scope="col" class="px-6 py-3 text-center">
                             Aksi
@@ -47,7 +47,7 @@
                     </tr>
                 </thead>
 
-                @foreach ($siswa as $no => $data)
+                @foreach ($catatan as $no => $data)
                     <tbody>
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                             <th scope="row"
@@ -55,35 +55,38 @@
                                 {{ $no + 1 }}
                             </th>
                             <td class="px-6 py-4">
-                                {{ $data->nis }}
+                                {{ $data->hari_tanggal }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $data->nama }}
+                                {{ $data->waktu }}
                             </td>
                             <td class="px-6 py-4">
-                                {{ $data->alamat }}
-                            </td>
-                            </td>
-                            <td class="px-6 py-4">
-                                {{ $data->no_hp }}
+                                {{ $data->materi }}
                             </td>
                             </td>
                             <td class="px-6 py-4">
-                                {{ $data->jenis_kelamin }}
+                                {{ $data->ringkasan }}
                             </td>
                             </td>
                             <td class="px-6 py-4">
-                                {{ $data->hobi }}
+                                {{ $data->kesulitan }}
+                            </td>
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $data->link_referensi }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $data->rencana_selanjutnya }}
                             </td>
                             <td class="px-6 py-4">
                                 <div class="flex space-x-2">
-                                    <a href="{{ route('siswa.edit', $data->id) }}">
+                                    <a href="{{ route('catatan.edit', $data->id) }}">
                                         <button type="button"
                                             class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full 
                                             text-sm px-2 py-1.5 text-center dark:focus:ring-yellow-300">Edit</button>
                                     </a>
                             
-                                    <form action="{{ route('siswa.delete', $data->id) }}" method="post">
+                                    <form action="{{ route('catatan.delete', $data->id) }}" method="post">
                                         @csrf
                                         <button type="submit"
                                             class="text-white bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full 
