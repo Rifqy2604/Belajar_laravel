@@ -45,5 +45,10 @@ class CatatanHasilBelajarController extends Controller
         return redirect()->route('catatan.tampil');
 
     }
-     
+
+    function edit($id)
+    {
+        $catatan = CatatanHasilBelajar::find($id);
+        return view('catatan.edit', compact('catatan'));
+    }
 }
