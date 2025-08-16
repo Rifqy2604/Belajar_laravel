@@ -95,7 +95,7 @@
                                         @csrf
                                         <button type="submit"
                                             class="text-white bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full 
-                                            text-sm px-2 py-1.5 text-center dark:focus:ring-red-300">Delete</button>
+                                            text-sm px-2 py-1.5 text-center dark:focus:ring-red-300">Deletee</button>
                                     </form>
                                 </div>
                             </td>
