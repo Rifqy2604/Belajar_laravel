@@ -11,7 +11,7 @@ class CatatanHasilBelajarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function tampil()
+    function tampil()
     {
         $catatan = CatatanHasilBelajar::all();
         return view("catatan.tampil", compact('catatan'));
@@ -21,7 +21,7 @@ class CatatanHasilBelajarController extends Controller
      * Store a newly created resource in storage.
      */
 
-    public function tambah()
+    function tambah()
     {
         return view('catatan.tambah');
     }
@@ -29,6 +29,6 @@ class CatatanHasilBelajarController extends Controller
     /**
      * Display the specified resource.
      */
-
     
+     
 }
