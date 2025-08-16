@@ -5,23 +5,17 @@ use App\Http\Controllers\UserController;
 use App\Models\CatatanHasilBelajar;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layout');
+// Route::get('/', function () {
+//     return view('layout');
+// });
+
+Route::get('/',function() {
+    return redirect()->route('catatan.tampil');
 });
 
-// Route Get
-Route::get('/halo', function () {
-    return view('halo');
-});
-
-// Route Redirect
-route::redirect('/youtube', '/tes');
-
-// Login
-Route::controller(UserController::class)->group(function () {
-    Route::get('/login', 'login');
-    Route::post('/login', 'dologin');
-    Route::post('/logout', 'doLogout');
-});
-
-Route::resource('catatan-hasil-belajar',CatatanHasilBelajarController::class);
+Route::get('/catatan',[CatatanHasilBelajarController::class,'tampil'])->name('catatan.tampil');
+Route::get('/catatan/tambah',[CatatanHasilBelajarController::class,'tambah'])->name('catatan.tambah');
+Route::get('/catatan/submit',[CatatanHasilBelajarController::class,'submit'])->name('catatan.submit');
+Route::get('/catatan/edit',[CatatanHasilBelajarController::class,'edit'])->name('catatan.edit');
+Route::get('/catatan/update',[CatatanHasilBelajarController::class,'update'])->name('catatan.update');
+Route::get('/catatan/delete',[CatatanHasilBelajarController::class,'delete'])->name('catatan.delete');
