@@ -29,7 +29,7 @@ class CatatanHasilBelajarController extends Controller
     /**
      * Display the specified resource.
      */
-    
+
     function submit(request $request)
     {
         $catatan = new CatatanHasilBelajar();
@@ -43,12 +43,27 @@ class CatatanHasilBelajarController extends Controller
 
         $catatan->save();
         return redirect()->route('catatan.tampil');
-
     }
 
     function edit($id)
     {
         $catatan = CatatanHasilBelajar::find($id);
         return view('catatan.edit', compact('catatan'));
+    }
+
+    function update(Request $request, $id)
+    {
+        $catatan = CatatanHasilBelajar::find($id);
+        $catatan = new CatatanHasilBelajar();
+        $catatan->hari_tanggal = $request->hari_tanggal;
+        $catatan->waktu = $request->waktu;
+        $catatan->materi = $request->materi;
+        $catatan->ringkasan = $request->ringkasan;
+        $catatan->kesulitan = $request->kesulitan;
+        $catatan->link_referensi = $request->link_referensi;
+        $catatan->rencana_selanjutnya = $request->rencana_selanjutnya;
+
+        $catatan->update();
+        return redirect()->route('catatan.tampil');
     }
 }
