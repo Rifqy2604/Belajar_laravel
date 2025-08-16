@@ -71,6 +71,6 @@ class CatatanHasilBelajarController extends Controller
     {
         $catatan = CatatanHasilBelajar::find($id);
         $catatan->delete();
-        return redirect()->route('catatan.tampi;');
+        return redirect()->route('catatan.tampil');
     }
 }
