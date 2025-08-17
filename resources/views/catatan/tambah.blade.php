@@ -16,12 +16,10 @@
                     placeholder="nis" required />
             </div>
             <div class="mb-2">
-                <label for="text" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Hari /
-                    Waktu</label>
+                <label for="text" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">waktu</label>
                 <input type="text" name="waktu"
-                    class="bg-gray-50 border border-gray-300 text-black-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700  dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Waktu" required />
-            </div>
             {{-- <div class="mb-2">
                 <label for="time" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Waktu</label>
                 <input type="time" name="waktu" value="{{ now()->timezone('Asia/Jakarta')->format('H:i') }}"
@@ -44,7 +42,7 @@
             <div class="mb-2">
                 <label for="text"
                     class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Kesulitan</label>
-                <textarea type="text" name="Kesulitan"
+                <textarea type="text" name="kesulitan"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700  dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Tulis Kesulitan Jika ada"></textarea>
             </div>
