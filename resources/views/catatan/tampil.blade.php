@@ -72,13 +72,11 @@
                                 {{ $data->kesulitan }}
                             </td>
                             </td>
-<td class="px-6 py-4">
-    <a href="{{ $data->link_referensi }}" 
-       target="_blank" 
-       class="text-blue-600 hover:underline">
-        {{ $data->link_referensi }}
-    </a>
-</td>
+                            <td class="px-6 py-4">
+                                <a href="{{ $data->link_referensi }}" target="_blank" class="text-blue-600 hover:underline">
+                                    {{ $data->link_referensi }}
+                                </a>
+                            </td>
 
                             <td class="px-6 py-4">
                                 {{ $data->rencana_selanjutnya }}
@@ -90,7 +88,7 @@
                                             class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full 
                                             text-sm px-2 py-1.5 text-center dark:focus:ring-yellow-300">Edit</button>
                                     </a>
-                            
+
                                     <form action="{{ route('catatan.delete', $data->id) }}" method="post">
                                         @csrf
                                         <button type="submit"
@@ -99,9 +97,9 @@
                                     </form>
                                 </div>
                             </td>
-                            
 
-                           
+
+
                         </tr>
                     </tbody>
                 @endforeach
