@@ -4,7 +4,7 @@
 
 <div class="container mx-auto">
     <h4 class="text-xl font-bold text-gray-900 dark:text-black mb-4 text-center">
-        List Siswa
+        List Catatan
     </h4>
 
 <form  action="{{ route('siswa.update', $siswa->id)}}" method="post" class="max-w-sm mx-auto">
