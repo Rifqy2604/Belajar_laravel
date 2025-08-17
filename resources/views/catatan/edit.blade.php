@@ -7,7 +7,7 @@
         List Catatan
     </h4>
 
-<form  action="{{ route('siswa.update', $siswa->id)}}" method="post" class="max-w-sm mx-auto">
+<form  action="{{ route('catatan.update', $catatan->id)}}" method="post" class="max-w-sm mx-auto">
   @csrf
     <div class="mb-2">
       <label for="text" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">NIS</label>
