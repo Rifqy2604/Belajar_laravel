@@ -54,7 +54,7 @@ class CatatanHasilBelajarController extends Controller
     function update(Request $request, $id)
     {
         $catatan = CatatanHasilBelajar::find($id);
-        $catatan = new CatatanHasilBelajar();
+        
         $catatan->hari_tanggal = $request->hari_tanggal;
         $catatan->waktu = $request->waktu;
         $catatan->materi = $request->materi;
