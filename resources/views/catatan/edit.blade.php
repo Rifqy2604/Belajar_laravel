@@ -36,9 +36,9 @@
                 <div class="mb-2">
                     <label for="text"
                         class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Ringkasan</label>
-                    <textarea type="text" name="ringkasan" value="{{ $catatan->ringkasan }}"
+                    <textarea type="text" name="ringkasan" 
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700  dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Tulis Ringkasan Jika ada"></textarea>
+                        placeholder="Tulis Ringkasan Jika ada">{{ $catatan->ringkasan }}"</textarea>
                 </div>
                 <div class="mb-2">
                     <label for="text"
