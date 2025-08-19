@@ -10,7 +10,7 @@
 <body>
     <div class="container mx-auto p-6">
         <h1 class="text-2xl font-bold text-gray-900 dark:text-black mb-4 text-center">
-            Aplikasi Catatan Bel
+            Aplikasi Catatan Be
         </h1>
     @yield('konten')
       {{-- Flowbite --}}
