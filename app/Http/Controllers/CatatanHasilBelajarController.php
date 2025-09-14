@@ -33,7 +33,8 @@ class CatatanHasilBelajarController extends Controller
     function submit(request $request)
     {
         $catatan = new CatatanHasilBelajar();
-        $catatan->hari_tanggal = $request->hari_tanggal;
+        $catatan->hari = $request->hari;
+        $catatan->tanggal = $request->tanggal;
         $catatan->waktu = $request->waktu;
         $catatan->materi = $request->materi;
         $catatan->ringkasan = $request->ringkasan;
@@ -55,7 +56,8 @@ class CatatanHasilBelajarController extends Controller
     {
         $catatan = CatatanHasilBelajar::find($id);
         
-        $catatan->hari_tanggal = $request->hari_tanggal;
+        $catatan->hari = $request->hari;
+        $catatan->tanggal = $request->tanggal;
         $catatan->waktu = $request->waktu;
         $catatan->materi = $request->materi;
         $catatan->ringkasan = $request->ringkasan;

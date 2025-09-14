@@ -9,9 +9,14 @@
         <form action="{{ route('catatan.submit') }}" method="post" class="max-w-sm mx-auto">
             @csrf
             <div class="mb-2">
-                <label for="date" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Hari /
-                    Tanggal</label>
-                <input type="date" name="hari_tanggal"
+                <label for="text" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Hari</label>
+                <input type="text" name="hari"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700  dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Hari" required />
+            </div>
+            <div class="mb-2">
+                <label for="date" class="block mb-2 text-sm font-medium text-black-900 dark:text-black">Tanggal</label>
+                <input type="date" name="tanggal"
                     class="bg-gray-50 border border-gray-300 text-black-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-white-700 dark:border-gray-900 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="nis" required />
             </div>

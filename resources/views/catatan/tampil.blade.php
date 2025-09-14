@@ -18,7 +18,10 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">
-                            Hari / Tanggal
+                            Hari
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Tanggal
                         </th>
                         <th scope="col" class="px-6 py-3">
                             Waktu
@@ -55,7 +58,10 @@
                                 {{ $no + 1 }}
                             </th> --}}
                             <td class="px-6 py-4">
-                                {{ $data->hari_tanggal }}
+                                {{ $data->hari }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $data->tanggal }}
                             </td>
                             <td class="px-6 py-4">
                                 {{ $data->waktu }}

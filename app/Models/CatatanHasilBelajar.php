@@ -12,7 +12,8 @@ class CatatanHasilBelajar extends Model
     protected $table = "catatan_hasil_belajar";
 
     protected $fillable = [
-        'hari_tanggal',
+        'hari',
+        'tanggal',
         'waktu',
         'materi',
         'ringkasan',

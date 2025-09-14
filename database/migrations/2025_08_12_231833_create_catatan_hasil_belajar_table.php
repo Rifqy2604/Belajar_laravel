@@ -16,7 +16,8 @@ return new class extends Migration
     {
         Schema::create('catatan_hasil_belajar', function (Blueprint $table) {
             $table->id();
-            $table->date('hari_tanggal');
+            $table->string('hari',50)->nullable();
+            $table->date('tanggal');
             // $table->time('waktu')->nullable();
             $table->string('waktu',255);
             $table->string('materi',255);
